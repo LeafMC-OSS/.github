@@ -1,57 +1,34 @@
-# OpenLeaf
+# OpenLeaf - LeafMC Open Sourced (partially)
 
-> Open-source software — built to last, free to use.
+> Community-driven ecosystem, built to last, free to use.
 
-We build and maintain a range of open-source projects: backend services, Minecraft plugins, web tools, and whatever else we feel like shipping. Everything here is public — read it, use it, contribute to it.
+OpenLeaf builds and maintains high-performance software for the Minecraft ecosystem and beyond. We operate on an Open-Core model. While our proprietary server network logic remains private, the tools, libraries, standalone plugins, and infrastructure wrappers we build to support it are open-source.
 
----
+## What We Open-Source
 
-## What we build
+We only share code that functions independently.
 
-- **Minecraft plugins** - modular Paper/Purpur plugins for server management
-- **Backend services** - JVM-based services in Kotlin and Java
-- **Web projects** - frontend and full-stack tools as they come up
-- **Utilities & libraries** - small focused tools that solve one thing well
+* **Standalone Plugins:** Modular Paper plugins solving specific server management problems.
+> More coming soon 👀
 
----
+## Tech Stack & Standards
 
-## Languages & Tools
+Review the individual project README before writing code.
 
-We don't have a single stack - we use what fits the project. That said, you'll commonly see:
+* **Minecraft Ecosystem:** Strictly Java 21 using modern Paper/Brigadier APIs. Legacy Bukkit code is rejected.
+* **Build Systems:** Gradle Kotlin DSL across all JVM projects.
 
-- **Kotlin** — our preferred language for new projects
-- **Java** - used for Minecraft plugins and where interop requires it
-- **Gradle Kotlin DSL** - build system across all projects
-- **TypeScript / JavaScript** - for web and frontend work
-- **Git flow** - feature branches, PRs, descriptive commits
 
----
+## How to Contribute
 
-## Contributing
+We maintain strict code quality standards. Follow this pipeline for your code to be merged:
 
-All repos are open to contributions. Here's the general flow:
+1. **Find an Issue:** Look for "good first issue" or "help wanted" tags. For major features, open an Issue to discuss it first.
+2. **Branch Out:** Fork the repository and use standard branching (e.g., feat/your-feature or fix/issue-name).
+3. **Keep it Testable:** Code must compile and test locally without access to private .jar files. Use provided mock environments if applicable.
+4. **Pass the Build:** All repositories use GitHub Actions CI/CD. Your PR must compile cleanly. Code triggering deprecation warnings or failing the build will not be reviewed.
+5. **Open a PR:** Provide a clear description of the changes, the reasoning, and local testing methods. Keep it focused on one feature per PR.
 
-1. **Find something to work on** - check the Issues tab. Look for `good first issue` or `help wanted`.
-2. **Fork the repo** and create a branch: `git checkout -b feat/my-feature`
-3. **Read the repo's own README** - each project documents its conventions and setup.
-4. **Open a Pull Request** with a clear description of what you changed and why.
+## License
 
-### Ground rules
-
-- Keep PRs focused — one feature or fix per PR
-- Follow the code style already in the repo (check for `.editorconfig` or linter config)
-- Write meaningful commit messages
-- If your change is significant, open an issue to discuss it first
-
----
-
-##  License
-
-Each repo specifies its own license. Most are **MIT** unless noted otherwise — check the `LICENSE` file in each project.
-
----
-
-<p align="center">
-  <sub>Built for the community, by the community.</sub>
-  <sub>Org is maintained by ferow on Github.</sub>
-</p>
+Each repository specifies its own license. Most of our open-source ecosystem is licensed under MIT unless noted otherwise. Check the LICENSE file in the specific project.
